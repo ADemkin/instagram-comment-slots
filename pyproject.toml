@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "instagram-comments-picker"
+version = "0.1.0"
+description = "@moscowliuda comments picker"
+authors = ["Anton Demkin <antondemkin@yandex.ru>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "instagram_comments_picker"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+instagrapi = "^1.16.41"
+python-dotenv = "^1.0.0"
+pillow = "^9.4.0"
+loguru = "^0.6.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.1"
+black = "^23.1.0"
+mypy = "^1.0.1"
+pylint = "^2.16.2"
+isort = "^5.12.0"
+flake8 = "^6.0.0"
+pycodestyle = "^2.10.0"
+restructuredtext-lint = "^1.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
