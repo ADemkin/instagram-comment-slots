@@ -28,14 +28,20 @@ Instagram comments slot machine
 
 Для запуска через терминал::
 
- $ poetry run python run.py [url-to-instagram-post]
+ $ poetry run python cli.py [url-to-instagram-post]
+
+Для запуска веб сервера с формой::
+
+ $ poetry run python server.py
+
+Сервер будет запущен по адресу `0.0.0.0:7777`
 
 Пример
 ======
 
 Вот пример работы скрипты через терминал::
 
- $ poetry run python run.py https://www.instagram.com/p/CgMyENGM64m/
+ $ poetry run python cli.py https://www.instagram.com/p/CgMyENGM64m/
  account: moscowliuda
  name: Людмила Мельникова Мск🛫Кгд🛫EVN🛫TBS
  text: @surdologoped_zelenograd спасибо, милая. Мне тоже так понравилась)
