@@ -30,10 +30,11 @@
       border-success border-4
       {% endif %}"
       {% if comment.winner %}id="winner"{% endif %}
+      name="post"
       >
         <div class="card-body">
-          <h5 class="card-title">@{{ comment.user.username }}{% if comment.winner %} - ПОБЕДИТЕЛЬ 🎉{% endif %}</h5>
-          <h6 class="card-subtitle mb-2">{{ comment.user.full_name }}</h6>
+          <h5 class="card-title">@{{ comment.username }}{% if comment.winner %} - ПОБЕДИТЕЛЬ 🎉{% endif %}</h5>
+          <h6 class="card-subtitle mb-2">{{ comment.fullname }}</h6>
           <p class="card-text">{{ comment.text }}</p>
         </div>
     </div>

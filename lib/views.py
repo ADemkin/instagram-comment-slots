@@ -20,7 +20,15 @@ class IndexView(View):
             form = await self.request.post()
             url = str(form["url"])
             ctx["post_url"] = url
-            comments = [c.dict() for c in get_comments_from_url(api, url)]
+            comments = [
+                {
+                    "text": comment.text,
+                    "username": comment.user.username,
+                    "fullname": comment.user.full_name,
+                    "winner": False,
+                }
+                for comment in get_comments_from_url(api, url)
+            ]
             winner = choice(comments)
             winner["winner"] = True
             ctx["comments"] = comments
