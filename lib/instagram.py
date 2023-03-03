@@ -5,8 +5,7 @@ from instagrapi import Client
 from instagrapi.exceptions import LoginRequired
 from instagrapi.types import Comment
 
-
-SETTINGS = Path('session.json')
+SETTINGS = Path("session.json")
 
 
 def create_logged_in_client(account: str, password: str) -> Client:
@@ -25,8 +24,8 @@ def create_logged_in_client(account: str, password: str) -> Client:
 
 
 def get_comments_from_url(api: Client, url: str) -> list[Comment]:
-    pk = api.media_pk_from_url(url)
-    return api.media_comments(pk)
+    key = api.media_pk_from_url(url)
+    return api.media_comments(key)
 
 
 def pick_random_comment_from_url(api: Client, url: str) -> Comment:
