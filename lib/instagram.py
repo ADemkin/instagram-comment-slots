@@ -25,7 +25,7 @@ def create_logged_in_client(account: str, password: str) -> Client:
 
 def get_comments_from_url(api: Client, url: str) -> list[Comment]:
     key = api.media_pk_from_url(url)
-    return api.media_comments(key)
+    return api.media_comments(key, amount=0)
 
 
 def pick_random_comment_from_url(api: Client, url: str) -> Comment:
